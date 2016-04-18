@@ -14,6 +14,7 @@
         card_view:cardElevation="5sp"
         card_view:cardUseCompatPadding="true">
 
+        <!--add above line if you are facing problem with elevation appearance (mostly on lollipop and above)-->
 
         <ImageView
             android:id="@+id/list_icon"

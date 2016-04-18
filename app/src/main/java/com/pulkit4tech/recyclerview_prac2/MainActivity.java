@@ -17,18 +17,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
         rcv = (RecyclerView) findViewById(R.id.recycler_view);
-
+        //creating instance of our recycler_adapter and passing data
         adapter = new Recycler_adapter(getApplicationContext(),getdata());
+        //setting adapter inside recycler view
         rcv.setAdapter(adapter);
-
+        //Most of the developer miss to add this line hence, recycler view don't show up
+        //setting recycler view with layout
         rcv.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
 
     }
 
+    //randomly creating some data to put inside recycler view
     public static List<data_item> getdata(){
         List<data_item> data = new ArrayList<>();
         int icon[] = {R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,
